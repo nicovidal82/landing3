@@ -1,0 +1,396 @@
+/* ===========================
+   Variables de Color
+   =========================== */
+:root {
+    --color-primary: #333e48; /* Gris Oscuro */
+    --color-accent: #00c7d3; /* Turquesa */
+    --color-bg: #ffffff; /* Blanco */
+    --color-bg-light: #f5f7fa;
+    --color-text: #333e48;
+    --color-text-light: #6b7280;
+}
+
+/* ===========================
+   Estilos Generales
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* ===========================
+   Navegación
+   =========================== */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--color-text);
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--color-accent);
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--color-accent) !important;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 991px) {
+    .logo {
+        height: 60px;
+    }
+}
+
+/* ===========================
+   Hero Section
+   =========================== */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(51, 62, 72, 0.92) 0%, rgba(51, 62, 72, 0.88) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: #e2e8f0;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.btn-cta {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #00a8b3 100%);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 199, 211, 0.3);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 199, 211, 0.4);
+    color: #ffffff;
+    background: linear-gradient(135deg, #00a8b3 0%, var(--color-accent) 100%);
+}
+
+/* ===========================
+   Services Section
+   =========================== */
+.services-section {
+    padding: 6rem 0;
+    background-color: var(--color-bg-light);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #e2e8f0;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 199, 211, 0.15);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-accent) 0%, #00a8b3 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.service-description {
+    color: var(--color-text-light);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* ===========================
+   Contact Section
+   =========================== */
+.contact-section {
+    padding: 6rem 0;
+    background-color: #ffffff;
+}
+
+.contact-form {
+    background: var(--color-bg-light);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(51, 62, 72, 0.08);
+}
+
+.form-control {
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 0.2rem rgba(0, 199, 211, 0.15);
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+#formMessage {
+    text-align: center;
+    font-weight: 500;
+}
+
+#formMessage.success {
+    color: var(--color-accent);
+}
+
+#formMessage.error {
+    color: #dc2626;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+.footer {
+    background-color: var(--color-primary);
+    color: #e2e8f0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ===========================
+   Animaciones
+   =========================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .logo {
+        height: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .btn-cta {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+    
+    .contact-form {
+        padding: 2rem;
+    }
+    
+    .service-card {
+        padding: 2rem;
+    }
+}
+
+/* ===========================
+   Smooth Scroll
+   =========================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===========================
+   Utilidades
+   =========================== */
+.text-accent {
+    color: var(--color-accent);
+}
+
+.bg-accent {
+    background-color: var(--color-accent);
+}
+
+/* ===========================
+   Tarjeta de Servicio Destacada
+   =========================== */
+.service-card-featured {
+    border: 2px solid var(--color-accent);
+    box-shadow: 0 10px 40px rgba(0, 199, 211, 0.2);
+}
+
+.service-card-featured:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 199, 211, 0.3);
+}
+
+.service-card-featured .service-icon {
+    width: 90px;
+    height: 90px;
+}
+
+.service-card-featured .service-title {
+    font-size: 1.6rem;
+}
+
+/* ===========================
+   Contact Section Logo
+   =========================== */
+.contact-logo {
+    height: 120px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+.contact-section .section-title {
+    font-size: 2rem;
+}
+
+@media (max-width: 767px) {
+    .contact-logo {
+        height: 80px;
+    }
+    
+    .contact-section .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* ===========================
+   Form Message Styles
+   =========================== */
+#formMessage {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#formMessage.error {
+    background-color: #f8d7da; /* Rojo claro */
+    color: #721c24; /* Rojo oscuro */
+    border: 1px solid #f5c6cb;
+    opacity: 1;
+}
+
+#formMessage.success {
+    background-color: #d4edda; /* Verde claro */
+    color: #155724; /* Verde oscuro */
+    border: 1px solid #c3e6cb;
+    opacity: 1;
+}
